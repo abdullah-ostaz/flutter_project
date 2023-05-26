@@ -20,7 +20,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> with Helpers {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.redAccent,
+        backgroundColor: Color.fromARGB(255, 190, 39, 196),
         title: const Text('My Favorite'),
         centerTitle: true,
         elevation: 0
@@ -49,7 +49,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> with Helpers {
                           Container(
                             height: 200,
                             child: Image.asset(
-                              'images/background_launcg_screen.jpg',
+                              'images/product.jpg',
                               fit: BoxFit.cover,
                             ),
                           ),
@@ -88,7 +88,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> with Helpers {
                                         },
                                         icon: const Icon(
                                           Icons.favorite_border,
-                                          color: Colors.red,
+                                          color: Color.fromARGB(255, 190, 39, 196),
                                         )),
                                   ],
                                 ),
@@ -97,7 +97,7 @@ class _FavoriteScreenState extends State<FavoriteScreen> with Helpers {
                                     Text(
                                       '\$ ${favorite[index].get('price')} ',
                                       style: const TextStyle(
-                                          color: Colors.redAccent, fontSize: 16),
+                                          color: Color.fromARGB(255, 190, 39, 196), fontSize: 16),
                                     ),
                                   ],
                                 )

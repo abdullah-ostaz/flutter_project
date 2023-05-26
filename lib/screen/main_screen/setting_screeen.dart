@@ -25,7 +25,7 @@ class _SettingScreenState extends State<SettingScreen> {
           ),
           const SizedBox(height: 30),
           SwitchListTile(
-              activeColor: Colors.redAccent,
+              activeColor: Color.fromARGB(255, 190, 39, 196),
               title: const Padding(
                 padding: EdgeInsets.only(bottom: 10),
                 child: Text(
@@ -46,7 +46,7 @@ class _SettingScreenState extends State<SettingScreen> {
               }),
           const SizedBox(height: 40),
           SwitchListTile(
-              activeColor: Colors.redAccent,
+              activeColor: Color.fromARGB(255, 190, 39, 196),
               title: const Padding(
                 padding: EdgeInsets.only(bottom: 10),
                 child: Text(
@@ -67,7 +67,7 @@ class _SettingScreenState extends State<SettingScreen> {
               }),
           const SizedBox(height: 40),
           SwitchListTile(
-              activeColor: Colors.redAccent,
+              activeColor: Color.fromARGB(255, 190, 39, 196),
               title: const Padding(
                 padding: EdgeInsets.only(bottom: 10),
                 child: Text(
@@ -94,7 +94,7 @@ class _SettingScreenState extends State<SettingScreen> {
                 style: TextStyle(color: Colors.white),
               ),
           style: ElevatedButton.styleFrom(
-            primary: Colors.redAccent,
+            primary: Color.fromARGB(255, 190, 39, 196),
             minimumSize: const Size(double.infinity, 50),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(30),

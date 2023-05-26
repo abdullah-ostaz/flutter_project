@@ -42,7 +42,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         ),
         centerTitle: true,
         elevation: 0,
-        backgroundColor: Colors.redAccent,
+        backgroundColor: Color.fromARGB(255, 190, 39, 196),
       ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
@@ -54,23 +54,23 @@ class _RegisterScreenState extends State<RegisterScreen> {
             TextField(
               controller: _emailTextController,
               keyboardType: TextInputType.emailAddress,
-              cursorColor: Colors.redAccent,
+              cursorColor: Color.fromARGB(255, 190, 39, 196),
               decoration: InputDecoration(
                 labelText: 'Email',
                 errorText: _emailError,
                 labelStyle:
-                    const TextStyle(color: Colors.redAccent, fontSize: 15),
+                    const TextStyle(color: Color.fromARGB(255, 190, 39, 196), fontSize: 15),
                 prefixIcon: const Icon(
                   Icons.email,
-                  color: Colors.redAccent,
+                  color: Color.fromARGB(255, 190, 39, 196),
                 ),
                 enabledBorder: const OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
-                  borderSide: BorderSide(color: Colors.redAccent),
+                  borderSide: BorderSide(color: Color.fromARGB(255, 190, 39, 196)),
                 ),
                 focusedBorder: const OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
-                  borderSide: BorderSide(color: Colors.redAccent),
+                  borderSide: BorderSide(color: Color.fromARGB(255, 190, 39, 196)),
                 ),
                 errorBorder: const OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -86,23 +86,23 @@ class _RegisterScreenState extends State<RegisterScreen> {
             TextField(
               controller: _passwordTextController,
               obscureText: true,
-              cursorColor: Colors.redAccent,
+              cursorColor: Color.fromARGB(255, 190, 39, 196),
               decoration: InputDecoration(
                 labelText: 'Password',
                 errorText: _passwordError,
                 labelStyle:
-                    const TextStyle(color: Colors.redAccent, fontSize: 15),
+                    const TextStyle(color: Color.fromARGB(255, 190, 39, 196), fontSize: 15),
                 prefixIcon: const Icon(
                   Icons.lock,
-                  color: Colors.redAccent,
+                  color: Color.fromARGB(255, 190, 39, 196),
                 ),
                 enabledBorder: const OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
-                  borderSide: BorderSide(color: Colors.redAccent),
+                  borderSide: BorderSide(color: Color.fromARGB(255, 190, 39, 196)),
                 ),
                 focusedBorder: const OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
-                  borderSide: BorderSide(color: Colors.redAccent),
+                  borderSide: BorderSide(color: Color.fromARGB(255, 190, 39, 196)),
                 ),
                 errorBorder: const OutlineInputBorder(
                   borderRadius: BorderRadius.all(Radius.circular(10)),
@@ -125,7 +125,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
               ),
               style: ElevatedButton.styleFrom(
                 minimumSize: const Size(double.infinity, 50),
-                primary: Colors.redAccent,
+                primary: Color.fromARGB(255, 190, 39, 196),
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(10),
                 ),

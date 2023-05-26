@@ -6,7 +6,7 @@ import 'package:superstore/models/helpers.dart';
 
 typedef UserAuthStatus = void Function({required bool loggedIn});
 class FbAuthController with Helpers {
-  final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
+final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
 
   Future<bool> signIn(
       {required BuildContext context,
@@ -18,14 +18,15 @@ class FbAuthController with Helpers {
       if (userCredential.user != null) {
         if (userCredential.user!.emailVerified) {
           return true;
-        } else {
-          await signOut();
-          showSnackBar(
-              context: context,
-              message: 'Verify email to login into the app',
-              error: true);
-          return false;
-        }
+       } 
+       //else {
+        //   await signOut();
+        //   showSnackBar(
+        //       context: context,
+        //       message: 'Verify email to login into the app',
+        //       error: true);
+        //   return false;
+        // }
       }
       return false;
     } on FirebaseAuthException catch (e) {
@@ -43,7 +44,7 @@ class FbAuthController with Helpers {
     try {
       UserCredential userCredential = await _firebaseAuth
           .createUserWithEmailAndPassword(email: email, password: password);
-      userCredential.user?.sendEmailVerification();
+      // userCredential.user?.sendEmailVerification();
       return true;
     } on FirebaseAuthException catch (e) {
       _controlException(context, e);

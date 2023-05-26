@@ -9,9 +9,9 @@ class Logo extends StatelessWidget {
   Widget build(BuildContext context) {
     return const Center(
       child: Text(
-          'SuperStore',
+          'Ahmed & Abdallah',
           style: TextStyle(
-            color: Colors.redAccent,
+            color: Color.fromARGB(255, 190, 39, 196),
             fontWeight: FontWeight.bold,
             fontSize: 40,
           )

@@ -16,7 +16,7 @@ class ProductScreen extends StatefulWidget {
 
 class _ProductScreenState extends State<ProductScreen> with Helpers {
   String? name;
-  String? gender;
+  String? category;
   String? price;
   String? description;
   String? id;
@@ -31,7 +31,7 @@ class _ProductScreenState extends State<ProductScreen> with Helpers {
       id = map['id'];
       email = map['email'];
       name = map['name'];
-      gender = map['gender'];
+      category = map['gender'];
       price = map['price'];
       description = map['description'];
     }
@@ -39,7 +39,7 @@ class _ProductScreenState extends State<ProductScreen> with Helpers {
         appBar: AppBar(
           elevation: 0,
           centerTitle: true,
-          iconTheme: const IconThemeData(color: Colors.black),
+          iconTheme: const IconThemeData(color: Color.fromARGB(255, 190, 39, 196)),
           backgroundColor: Colors.white,
           title: const Text(
             'Product',
@@ -56,7 +56,7 @@ class _ProductScreenState extends State<ProductScreen> with Helpers {
               height: 300,
               width: double.infinity,
               child: Image.asset(
-                'images/background_launcg_screen.jpg',
+                'images/product.jpg',
                 height: double.infinity,
                 width: double.infinity,
                 fit: BoxFit.cover,
@@ -81,19 +81,19 @@ class _ProductScreenState extends State<ProductScreen> with Helpers {
                           '\$ ${price ?? 'null'}',
                           textAlign: TextAlign.end,
                           style: const TextStyle(
-                              fontSize: 18, color: Colors.redAccent),
+                              fontSize: 18, color: Color.fromARGB(255, 190, 39, 196)),
                         )),
                       ],
                     ),
                     const SizedBox(height: 20),
                     const Text(
-                      'Gender',
+                      'Category',
                       style:
                           TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
                     ),
                     const SizedBox(height: 10),
                     Text(
-                      gender ?? 'null',
+                      category ?? 'null',
                       style: const TextStyle(fontSize: 14, color: Colors.grey),
                     ),
                     const SizedBox(height: 20),
@@ -107,23 +107,7 @@ class _ProductScreenState extends State<ProductScreen> with Helpers {
                       description ?? 'null',
                       style: const TextStyle(fontSize: 14, color: Colors.grey),
                     ),
-                    const SizedBox(height: 30),
-                    ElevatedButton(
-                      onPressed: () async {
-                        bool status = await FbFireStoreController().addToCart(cart:getCart(id!));
-                        String message = status ? 'Add Successfully' : 'Add Field';
-                        showSnackBar(context: context, message: message);
-                      },
-                      child: const Text('ADD TO CART'),
-                      style: ElevatedButton.styleFrom(
-                        elevation: 0,
-                        primary: Colors.redAccent,
-                        minimumSize: const Size(60, 50),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
-                        ),
-                      ),
-                    ),
+                    const SizedBox(height: 30),         
                     const SizedBox(height: 20),
                   ],
                 ),
@@ -133,10 +117,5 @@ class _ProductScreenState extends State<ProductScreen> with Helpers {
         ));
   }
 
-  Cart getCart(String id){
-    Cart cart = Cart();
-    cart.id = id;
-    // cart.email = email;
-    return cart;
-  }
+ 
 }

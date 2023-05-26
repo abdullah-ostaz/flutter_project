@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:superstore/models/bn_screen.dart';
-import 'package:superstore/screen/main_screen/cart_screen.dart';
 import 'package:superstore/screen/main_screen/home_screen.dart';
 import 'package:superstore/screen/main_screen/profile_screen.dart';
 import 'package:superstore/screen/main_screen/setting_screeen.dart';
@@ -16,7 +15,6 @@ class MainScreen extends StatefulWidget {
 class _MainScreenState extends State<MainScreen> {
   final List<BnScreen> _bnScreen = <BnScreen>[
     BnScreen(widget: const HomeScreen(), title: 'Home'),
-    BnScreen(widget: const CartScreen(), title: 'Shopping Cart'),
     BnScreen(widget: const ProfileScreen(), title: 'Profile'),
     BnScreen(widget: const SettingScreen(), title: 'Settings'),
   ];
@@ -37,7 +35,7 @@ class _MainScreenState extends State<MainScreen> {
         },
         currentIndex: _selectedIndex,
         type: BottomNavigationBarType.fixed,
-        selectedIconTheme: const IconThemeData(color: Colors.redAccent, size: 27),
+        selectedIconTheme: const IconThemeData(color: Color.fromARGB(255, 190, 39, 196), size: 27),
         unselectedIconTheme: const IconThemeData(color: Colors.grey, size: 24),
         showSelectedLabels: false,
         showUnselectedLabels: false,
@@ -47,16 +45,12 @@ class _MainScreenState extends State<MainScreen> {
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.card_travel_outlined),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
             icon: Icon(Icons.person_outline),
-            label: 'Home',
+            label: 'Profile',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.settings_outlined),
-            label: 'Home',
+            label: 'Settings',
           ),
         ],
       ),

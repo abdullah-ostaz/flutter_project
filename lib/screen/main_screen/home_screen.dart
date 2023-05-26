@@ -57,7 +57,7 @@ class _HomeScreenState extends State<HomeScreen> with Helpers {
                         Container(
                           height: 200,
                           child: Image.asset(
-                            'images/background_launcg_screen.jpg',
+                            'images/product.jpg',
                             fit: BoxFit.cover,
                           ),
                         ),
@@ -78,14 +78,14 @@ class _HomeScreenState extends State<HomeScreen> with Helpers {
                                               TextButton(onPressed: (){
                                                 deleteProduct(path: product[index].id);
                                                 Navigator.pop(context);
-                                              }, child: const Text('delete',style: TextStyle(color: Colors.red))),
+                                              }, child: const Text('delete',style: TextStyle(color: Color.fromARGB(255, 190, 39, 196)))),
                                             ],
                                           );
                                         });
                                       },
                                       icon: const Icon(
                                         Icons.delete_outline,
-                                        color: Colors.redAccent,
+                                        color: Color.fromARGB(255, 190, 39, 196),
                                       ))
                                 ],
                               ),
@@ -96,12 +96,7 @@ class _HomeScreenState extends State<HomeScreen> with Helpers {
                                         product[index].get('gender'),
                                         style: const TextStyle(
                                             color: Colors.grey),
-                                      )),
-                                  // FutureBuilder<bool>(
-                                  //   future: FbFireStoreController().getUserToProductFavorite(productId: product[index].id),
-                                  //   builder: (context,snapshot) {
-                                  //     bool isLike = snapshot.data ?? false;
-                                       IconButton(
+                                      )),                IconButton(
                                           onPressed: () async {
                                              // isLike = await FbFireStoreController().deleteFavotite(id: product[index].id)
                                             status = Provider.of<CartProvider>(context,listen: false).changeFavorite(true);
@@ -113,18 +108,16 @@ class _HomeScreenState extends State<HomeScreen> with Helpers {
                                           icon:  Icon(
                                             Icons.favorite_border ,
                                             // Icons.favorite_border,
-                                            color: Provider.of<CartProvider>(context).isLike ? Colors.red : Colors.black,
+                                            color: Provider.of<CartProvider>(context).isLike ? Color.fromARGB(255, 190, 39, 196) : Colors.black,
                                           )),
-                                  //   }
-                                  // ),
                                 ],
                               ),
-                              Row(
+                              Row(mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
                                   Text(
                                     '\$ ${product[index].get('price')} ',
                                     style: const TextStyle(
-                                        color: Colors.redAccent, fontSize: 16),
+                                        color: Color.fromARGB(255, 190, 39, 196), fontSize: 16),
                                   ),
                                 ],
                               )

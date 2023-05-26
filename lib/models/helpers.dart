@@ -8,7 +8,7 @@ mixin Helpers {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(message),
-        backgroundColor: error ? Colors.red : Colors.green,
+        backgroundColor: error ? Color.fromARGB(255, 190, 39, 196) : Colors.green,
         behavior: SnackBarBehavior.floating,
         duration: const Duration(seconds: 3),
       ),

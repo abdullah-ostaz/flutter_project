@@ -12,12 +12,12 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       elevation: 0,
       centerTitle: true,
-      iconTheme: const IconThemeData(color: Colors.black),
+      iconTheme: const IconThemeData(color: Color.fromARGB(255, 190, 39, 196)),
       backgroundColor: Colors.white,
       title: Text(
         title,
         style: const TextStyle(
-          color: Colors.black,
+          color: Color.fromARGB(255, 190, 39, 196),
           fontSize: 25,
         ),
       ),
@@ -25,7 +25,7 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
       actions: [
         PopupMenuButton<String>(
           offset: const Offset(-10,40),
-          color: Colors.redAccent.shade100,
+          color:  Color.fromARGB(255, 190, 39, 196),
           onSelected: (String value){
             if(value == 'f') {
               Navigator.pushNamed(context, '/FavoriteScreen');
@@ -34,14 +34,13 @@ class MyAppBar extends StatelessWidget implements PreferredSizeWidget {
             }
           },
           itemBuilder: (context){
-          return const [
+                 return const [
             PopupMenuItem(
               value: 'f',
-                child: Text('Favorite'),
-            ),
+                child: Text('Favorite'),textStyle: TextStyle(color: Colors.white,fontSize: 20),),
             PopupMenuItem(
                 value: 'a',
-                child: Text('Add Product'),)
+                child: Text('Add Product'),textStyle: TextStyle(color: Colors.white,fontSize: 20),)
           ];
         },)
       ],

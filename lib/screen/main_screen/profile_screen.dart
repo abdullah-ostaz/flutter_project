@@ -16,7 +16,7 @@ class ProfileScreen extends StatelessWidget {
             child: Row(
               children: [
                 Image.asset(
-                  'images/background_launcg_screen.jpg',
+                  'images/images.jpeg',
                   height: 120,
                   width: 120,
                   fit: BoxFit.cover,
@@ -27,13 +27,10 @@ class ProfileScreen extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: const [
                     Text(
-                      'Abedallah Ostaz',
+                      'User Profile',
                       style: TextStyle(color: Colors.black, fontSize: 16),
                     ),
-                    Text(
-                      'a.ostaz@gmail.com',
-                      style: TextStyle(color: Colors.black, fontSize: 14),
-                    ),
+          
                   ],
                 ),
               ],
@@ -41,55 +38,7 @@ class ProfileScreen extends StatelessWidget {
           ),
           Expanded(
             child: ListView(
-              children: [
-                const ListTile(
-                  leading: Icon(Icons.edit_outlined, color: Colors.redAccent),
-                  title: Text('Edit Profile'),
-                  trailing: Icon(Icons.arrow_forward_ios,
-                      size: 18, color: Colors.black),
-                ),
-                const ListTile(
-                  leading: Icon(Icons.location_on_outlined,
-                      color: Colors.redAccent),
-                  title: Text('Shipping Address'),
-                  trailing: Icon(Icons.arrow_forward_ios,
-                      size: 18, color: Colors.black),
-                ),
-                const ListTile(
-                  leading:
-                      Icon(Icons.favorite_outline, color: Colors.redAccent),
-                  title: Text('Wishlist'),
-                  trailing: Icon(Icons.arrow_forward_ios,
-                      size: 18, color: Colors.black),
-                ),
-                const ListTile(
-                  leading:
-                      Icon(Icons.timer_outlined, color: Colors.redAccent),
-                  title: Text('Order History'),
-                  trailing: Icon(Icons.arrow_forward_ios,
-                      size: 18, color: Colors.black),
-                ),
-                const ListTile(
-                  leading: Icon(Icons.border_all_outlined,
-                      color: Colors.redAccent),
-                  title: Text('Track Order'),
-                  trailing: Icon(Icons.arrow_forward_ios,
-                      size: 18, color: Colors.black),
-                ),
-                const ListTile(
-                  leading: Icon(Icons.card_travel_outlined,
-                      color: Colors.redAccent),
-                  title: Text('Cards'),
-                  trailing: Icon(Icons.arrow_forward_ios,
-                      size: 18, color: Colors.black),
-                ),
-                const ListTile(
-                  leading: Icon(Icons.notifications_outlined,
-                      color: Colors.redAccent),
-                  title: Text('Notifications'),
-                  trailing: Icon(Icons.arrow_forward_ios,
-                      size: 18, color: Colors.black),
-                ),
+              children: [                    
                 ListTile(
                   leading: const Icon(Icons.logout_outlined, color: Colors.redAccent),
                   title: const Text('Log Out'),

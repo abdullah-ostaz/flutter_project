@@ -44,7 +44,7 @@ class _CreateProductScreenState extends State<CreateProductScreen>
         title: const Text('Create Product'),
         centerTitle: true,
         elevation: 0,
-        backgroundColor: Colors.redAccent,
+        backgroundColor: Color.fromARGB(255, 190, 39, 196),
       ),
       body: ListView(
         physics: const NeverScrollableScrollPhysics(),
@@ -57,7 +57,7 @@ class _CreateProductScreenState extends State<CreateProductScreen>
           const SizedBox(height: 20),
           TextField(
             controller: _genderTextController,
-            decoration: const InputDecoration(hintText: 'Enter Gender'),
+            decoration: const InputDecoration(hintText: 'Enter Category'),
           ),
           const SizedBox(height: 20),
           TextField(
@@ -80,7 +80,7 @@ class _CreateProductScreenState extends State<CreateProductScreen>
             ),
             style: ElevatedButton.styleFrom(
                 minimumSize: const Size(0, 50),
-                primary: Colors.redAccent,
+                primary: Color.fromARGB(255, 190, 39, 196),
                 elevation: 0),
           )
         ],

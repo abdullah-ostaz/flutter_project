@@ -43,7 +43,7 @@ class _LaunchScreenState extends State<LaunchScreen> {
         children: [
           ImageFiltered(
             imageFilter: ImageFilter.blur(sigmaY: 5,sigmaX: 5),
-            child:Image.asset("images/background_launcg_screen.jpg",fit: BoxFit.cover,height: double.infinity,) ),
+            child:Image.asset("images/pexels-robin-1020370.jpg",fit: BoxFit.cover,height: double.infinity,) ),
           Container(
             alignment: Alignment.center,
             child: Column(
@@ -62,7 +62,7 @@ class _LaunchScreenState extends State<LaunchScreen> {
                 Logo(),
                 SizedBox(height: 150),
                 Text(
-                  '''SUPERSTORE\n       UI KIT''',
+                  '''Ahmed  & Abdallah Store\n      Shooping Fast''',
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 28,
